@@ -13,6 +13,11 @@
   Alle mit [eckigen Klammern] markierten Angaben sowie Preise,
   Zahlen und Team-Profile sind Platzhalter und vor dem Livegang
   durch echte Daten zu ersetzen.
+
+  BILDER: alle Motive liegen als Web-Links bei Unsplash (images.unsplash.com),
+  es wird kein lokaler Bildordner mehr gebraucht. Die Groesse steuert der
+  Parameter w= in der URL. Vor dem Livegang durch eigene Praxisfotos
+  ersetzen – besonders Team- und Patientenportraits.
   =====================================================================
 -->
 
@@ -24,7 +29,9 @@
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="preload" as="image" href="sport.assets/hero.jpg" fetchpriority="high" />
+<!-- Bild-CDN frueh verbinden, sonst kostet das Heldenbild einen zusaetzlichen Roundtrip -->
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1579126038374-6064e9370f0f?auto=format&amp;fit=crop&amp;w=2000&amp;q=80" fetchpriority="high" />
 
 <style>
 /* ============================================================
@@ -622,9 +629,9 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 
   <!-- ============================ HERO ============================ -->
   <section class="hero">
-    <img class="hero-img" src="sport.assets/hero.jpg"
-         alt="Person in einer Yoga-Haltung auf einem Felsen im Gegenlicht"
-         width="2400" height="1600" fetchpriority="high" />
+    <img class="hero-img" src="https://images.unsplash.com/photo-1579126038374-6064e9370f0f?auto=format&amp;fit=crop&amp;w=2000&amp;q=80"
+         alt="Person sitzt in einer Yoga-Haltung auf einem Felsen am Meer im Gegenlicht"
+         width="2000" height="1333" fetchpriority="high" />
 
     <div class="hero-body">
       <p class="hero-badge">
@@ -679,7 +686,8 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
         <!-- 1 -->
         <div data-rv>
           <div class="step-card">
-            <img src="sport.assets/step1.jpg" alt="Befundgespräch in der Praxis" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                 alt="Befundgespräch: Therapeutin erklärt einem Patienten die Aufnahmen am Bildschirm" loading="lazy" />
             <span class="step-no">1</span>
             <div class="chip chip-1">
               <b>Erstbefund · 45 Minuten</b>
@@ -723,7 +731,8 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
         <!-- 3 -->
         <div data-rv>
           <div class="step-card">
-            <img src="sport.assets/step3.jpg" alt="Übung auf dem Gymnastikball in der Therapie" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                 alt="Manuelle Therapie: Hände einer Therapeutin am Rücken einer Patientin" loading="lazy" />
             <span class="step-no">3</span>
             <div class="chip chip-3">
               <span class="chip-title">In der Behandlung</span>
@@ -741,7 +750,8 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
         <!-- 4 -->
         <div data-rv>
           <div class="step-card">
-            <img src="sport.assets/step4.jpg" alt="Rumpftraining auf der Matte" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                 alt="Rumpftraining auf der Matte" loading="lazy" />
             <span class="step-no">4</span>
             <div class="chip chip-4">
               <b>Übungsplan für zu Hause</b>
@@ -770,7 +780,8 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 
     <div class="showcase">
       <figure class="shot" style="margin:0" data-rv>
-        <img src="sport.assets/show-ruecken.jpg" alt="Rücken- und Schulterpartie beim Training" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1591258370814-01609b341790?auto=format&amp;fit=crop&amp;w=1600&amp;q=80"
+             alt="Zwei Personen bei einer Rückenübung auf der Matte" loading="lazy" />
         <figcaption class="shot-cap">
           <h3>Rücken, Nacken, Schulter</h3>
           <p>Der häufigste Grund, warum Menschen zu uns kommen. Wir lösen die Spannung – und bauen dann auf, was fehlt.</p>
@@ -779,7 +790,8 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
       </figure>
 
       <figure class="shot" style="margin:0" data-rv>
-        <img src="sport.assets/show-training.jpg" alt="Gruppentraining auf Matten im Studio" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&amp;fit=crop&amp;w=1600&amp;q=80"
+             alt="Gruppentraining auf Matten im Studio" loading="lazy" />
         <figcaption class="shot-cap">
           <h3>Reha- und Gerätetraining</h3>
           <p>Nach Operation oder Verletzung: dosierter Aufbau an Geräten und auf der Matte, begleitet statt allein.</p>
@@ -788,7 +800,8 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
       </figure>
 
       <figure class="shot" style="margin:0" data-rv>
-        <img src="sport.assets/show-sport.jpg" alt="Krafttraining mit Langhantel" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&amp;fit=crop&amp;w=1600&amp;q=80"
+             alt="Krafttraining mit Langhantel" loading="lazy" />
         <figcaption class="shot-cap">
           <h3>Sport und Wiedereinstieg</h3>
           <p>Wir bringen dich nicht nur schmerzfrei, sondern belastbar zurück – mit klaren Kriterien für den Wiedereinstieg.</p>
@@ -835,7 +848,7 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 
       <div class="rail" data-rv>
         <article class="doc">
-          <div class="doc-face"><img src="sport.assets/team-1.jpg" alt="Porträt der Praxisleiterin" loading="lazy" /></div>
+          <div class="doc-face"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&amp;fit=crop&amp;crop=faces&amp;w=400&amp;h=600&amp;q=80" alt="Porträt der Praxisleiterin" loading="lazy" /></div>
           <div class="doc-body">
             <p class="doc-inst">Praxisleitung</p>
             <h4>[Lena Berger]</h4>
@@ -846,7 +859,7 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
         </article>
 
         <article class="doc">
-          <div class="doc-face"><img src="sport.assets/team-2.jpg" alt="Porträt des Sportphysiotherapeuten" loading="lazy" /></div>
+          <div class="doc-face"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;crop=faces&amp;w=400&amp;h=600&amp;q=80" alt="Porträt des Sportphysiotherapeuten" loading="lazy" /></div>
           <div class="doc-body">
             <p class="doc-inst">Sportphysiotherapie</p>
             <h4>[Marek Kowal]</h4>
@@ -857,7 +870,7 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
         </article>
 
         <article class="doc">
-          <div class="doc-face"><img src="sport.assets/team-3.jpg" alt="Porträt der Therapeutin für Lymphdrainage" loading="lazy" /></div>
+          <div class="doc-face"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&amp;fit=crop&amp;crop=faces&amp;w=400&amp;h=600&amp;q=80" alt="Porträt der Therapeutin für Lymphdrainage" loading="lazy" /></div>
           <div class="doc-body">
             <p class="doc-inst">Lymphologie</p>
             <h4>[Sarah Reinhardt]</h4>
@@ -868,7 +881,7 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
         </article>
 
         <article class="doc">
-          <div class="doc-face"><img src="sport.assets/team-4.jpg" alt="Porträt des Therapeuten für Trainingstherapie" loading="lazy" /></div>
+          <div class="doc-face"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&amp;fit=crop&amp;crop=faces&amp;w=400&amp;h=600&amp;q=80" alt="Porträt des Therapeuten für Trainingstherapie" loading="lazy" /></div>
           <div class="doc-body">
             <p class="doc-inst">Trainingstherapie</p>
             <h4>[Tom Neumann]</h4>
@@ -899,28 +912,28 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 
       <div class="vrail" id="vrail" data-rv>
         <article class="voice">
-          <div class="voice-img"><img src="sport.assets/v1.jpg" alt="Porträt einer lachenden Patientin" loading="lazy" /></div>
+          <div class="voice-img"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;crop=faces&amp;w=700&amp;h=560&amp;q=80" alt="Porträt einer lachenden Patientin" loading="lazy" /></div>
           <p class="voice-name">[Nadine], 34 · Bürojob</p>
           <p class="voice-q">„Drei Jahre Nackenschmerzen. Nach sechs Terminen wusste ich zum ersten Mal, was ich selbst tun kann.“</p>
           <p class="voice-note">Spannungskopfschmerz und HWS-Blockade</p>
         </article>
 
         <article class="voice">
-          <div class="voice-img"><img src="sport.assets/v2.jpg" alt="Porträt eines Patienten" loading="lazy" /></div>
+          <div class="voice-img"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;crop=faces&amp;w=700&amp;h=560&amp;q=80" alt="Porträt eines Patienten" loading="lazy" /></div>
           <p class="voice-name">[Daniel], 41 · Handwerker</p>
           <p class="voice-q">„Ich dachte, nach dem Bandscheibenvorfall ist Schluss mit Heben. Heute arbeite ich wieder voll.“</p>
           <p class="voice-note">Bandscheibenvorfall L5/S1, Wiedereingliederung</p>
         </article>
 
         <article class="voice">
-          <div class="voice-img"><img src="sport.assets/v3.jpg" alt="Porträt einer Patientin im Freien" loading="lazy" /></div>
+          <div class="voice-img"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;crop=faces&amp;w=700&amp;h=560&amp;q=80" alt="Porträt einer Patientin im Freien" loading="lazy" /></div>
           <p class="voice-name">[Mira], 28 · Läuferin</p>
           <p class="voice-q">„Statt ‚erstmal Pause‘ gab es einen Plan. Nach elf Wochen bin ich meinen Halbmarathon gelaufen.“</p>
           <p class="voice-note">Läuferknie, Return to Run</p>
         </article>
 
         <article class="voice">
-          <div class="voice-img"><img src="sport.assets/v4.jpg" alt="Porträt eines Patienten mit Brille" loading="lazy" /></div>
+          <div class="voice-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&amp;fit=crop&amp;crop=faces&amp;w=700&amp;h=560&amp;q=80" alt="Porträt eines Patienten mit Brille" loading="lazy" /></div>
           <p class="voice-name">[Jonas], 55 · nach Knie-TEP</p>
           <p class="voice-q">„Die Gerätetherapie hat mir die Angst genommen, das neue Knie zu belasten.“</p>
           <p class="voice-note">Knie-Totalendoprothese, Reha-Nachsorge</p>
@@ -954,7 +967,8 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
         <!-- links: Karte -->
         <div data-rv>
           <div class="pcard">
-            <img src="sport.assets/card.jpg" alt="Übung im Therapieraum" loading="lazy" id="pcard-img" />
+            <img src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                 alt="Begleitetes Training an der Hantelbank" loading="lazy" id="pcard-img" />
             <div class="metric">
               <small>Schulter-Beweglichkeit</small>
               <b>165°</b> <i>vorher 110°</i>
@@ -965,14 +979,15 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
             </div>
           </div>
 
+          <!-- data-src laedt die grosse Fassung, das <img> nur eine 120px-Vorschau. -->
           <div class="thumbs" role="tablist" aria-label="Weitere Ansichten">
-            <button class="on" role="tab" aria-selected="true" data-src="sport.assets/card.jpg"><img src="sport.assets/card.jpg" alt="" loading="lazy"/></button>
-            <button role="tab" aria-selected="false" data-src="sport.assets/step3.jpg"><img src="sport.assets/step3.jpg" alt="" loading="lazy"/></button>
-            <button role="tab" aria-selected="false" data-src="sport.assets/step4.jpg"><img src="sport.assets/step4.jpg" alt="" loading="lazy"/></button>
-            <button role="tab" aria-selected="false" data-src="sport.assets/show-training.jpg"><img src="sport.assets/show-training.jpg" alt="" loading="lazy"/></button>
-            <button role="tab" aria-selected="false" data-src="sport.assets/show-sport.jpg"><img src="sport.assets/show-sport.jpg" alt="" loading="lazy"/></button>
-            <button role="tab" aria-selected="false" data-src="sport.assets/show-ruecken.jpg"><img src="sport.assets/show-ruecken.jpg" alt="" loading="lazy"/></button>
-            <button role="tab" aria-selected="false" data-src="sport.assets/final.jpg"><img src="sport.assets/final.jpg" alt="" loading="lazy"/></button>
+            <button class="on" role="tab" aria-selected="true" data-src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?auto=format&amp;fit=crop&amp;w=900&amp;q=80"><img src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?auto=format&amp;fit=crop&amp;w=120&amp;h=152&amp;q=70" alt="" loading="lazy"/></button>
+            <button role="tab" aria-selected="false" data-src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&amp;fit=crop&amp;w=900&amp;q=80"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&amp;fit=crop&amp;w=120&amp;h=152&amp;q=70" alt="" loading="lazy"/></button>
+            <button role="tab" aria-selected="false" data-src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&amp;fit=crop&amp;w=120&amp;h=152&amp;q=70" alt="" loading="lazy"/></button>
+            <button role="tab" aria-selected="false" data-src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&amp;fit=crop&amp;w=900&amp;q=80"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&amp;fit=crop&amp;w=120&amp;h=152&amp;q=70" alt="" loading="lazy"/></button>
+            <button role="tab" aria-selected="false" data-src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&amp;fit=crop&amp;w=900&amp;q=80"><img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&amp;fit=crop&amp;w=120&amp;h=152&amp;q=70" alt="" loading="lazy"/></button>
+            <button role="tab" aria-selected="false" data-src="https://images.unsplash.com/photo-1591258370814-01609b341790?auto=format&amp;fit=crop&amp;w=900&amp;q=80"><img src="https://images.unsplash.com/photo-1591258370814-01609b341790?auto=format&amp;fit=crop&amp;w=120&amp;h=152&amp;q=70" alt="" loading="lazy"/></button>
+            <button role="tab" aria-selected="false" data-src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&amp;fit=crop&amp;w=120&amp;h=152&amp;q=70" alt="" loading="lazy"/></button>
           </div>
         </div>
 
@@ -1084,7 +1099,8 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 
   <!-- ======================= ABSCHLUSS ======================= -->
   <section class="final">
-    <img src="sport.assets/final.jpg" alt="Person bei einer Yoga-Übung im Sonnenuntergang" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&amp;fit=crop&amp;w=1800&amp;q=80"
+         alt="Person bei einer Yoga-Übung im Sonnenuntergang" loading="lazy" />
     <div class="final-body">
       <span class="stars" style="color:rgba(255,255,255,.9)">
         <b style="font-weight:400">4,9 von 5</b>
@@ -1270,4 +1286,5 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 </script>
 </body>
 </html>
+
 
